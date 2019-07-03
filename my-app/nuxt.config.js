@@ -3,10 +3,14 @@ const pkg = require('./package')
 
 export default {
 // module.exports = {
+
+  // 設定： https://ja.nuxtjs.org/guide/configuration/
   generate: {
     fallback: true
   },
-  mode: 'universal',
+  mode: 'spa',
+  // 'spa': サーバーサイドレンダリングを行わない（クライアントでのナビゲーションのみ）
+  // 'universal': アイソモーフィックなアプリケーション（サーバーサイドレンダリングに加え、クライアントでのナビゲーションを行う）
   /*
   ** Headers of the page
   */
@@ -23,6 +27,7 @@ export default {
   },
   /*
   ** Customize the progress-bar color
+  ** https://ja.nuxtjs.org/api/configuration-loading
   */
   loading: { color: '#f00' },
   /*
@@ -49,6 +54,12 @@ export default {
     sass: [
       '~/assets/scss/_variables.scss' // 読みませたいscssファイルを指定します。
     ]
+  },
+  router: {
+    base: '/labo/test/'
+    // base: process.env.NODE_ENV === 'dev' ? '/' : '/labo/test/'
+    // generate時にproductionになる
+    // base: process.env.NODE_ENV === 'production' ? config.dirurl : '/'
   },
   /*
   ** Build configuration

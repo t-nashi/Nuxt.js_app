@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <div class="header-inner">
-      <h1><a href="/">my-portfolio</a></h1>
-      <p><a href="about">自己紹介</a></p>
-      <p><a href="jsonload">json読み込み</a></p>
-      <p><a href="hogehoge">エラー</a></p>
+      <h1><n-link to="/">my-portfolio</n-link></h1>
+      <p><n-link to="about">自己紹介</n-link></p>
+      <p><n-link to="jsonload">json読み込み</n-link></p>
+      <p><n-link to="hogehoge">エラー</n-link></p>
     </div>
   </header>
 </template>
